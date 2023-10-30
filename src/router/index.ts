@@ -3,18 +3,23 @@ import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router"
 const routes: RouteRecordRaw[] = [
     {
         path: '/',
-        name: 'tasks',
-        component: () => import('@/components/TaskList.vue')
+        name: 'login',
+        component: () => import('@/components/Login.vue')
     },
     {
-        path: '/tasks/new',
-        name: 'tasks-new',
-        component: () => import('@/components/TaskForm.vue')
+        path: '/bookmarks',
+        name: 'bookmarks',
+        component: () => import('@/components/BookmarksList.vue')
     },
     {
-        path: '/tasks/:id',
-        name: 'tasks-detail',
-        component: () => import('@/components/TaskDetail.vue')
+        path: '/bookmarks/new',
+        name: 'bookmarks-new',
+        component: () => import('@/components/BookmarkForm.vue')
+    },
+    {
+        path: '/bookmarks/:id',
+        name: 'bookmarks-detail',
+        component: () => import('@/components/BookmarkDetail.vue')
     },
 ]
 
