@@ -24,6 +24,7 @@ export default defineComponent({
   },
   methods: {
     async findOrCreateUser(user: User) {
+      console.log(user)
       const email = user.email;
       const res = await getUser(email);
 
@@ -43,7 +44,7 @@ export default defineComponent({
       try {
         const result = await signInWithPopup(auth, provider);
         const userAuth = result.user;
-
+        
         if (userAuth) {
           this.user.name = userAuth.displayName || "";
           this.user.email = userAuth.email || "";

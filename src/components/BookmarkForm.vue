@@ -13,7 +13,7 @@
 import { defineComponent } from 'vue';
 import { Bookmark } from '@/interfaces/Bookmark';
 import { createBookmark } from '@/services/BookmarkService';
-import { useUserStore } from '@/stores/userStore';
+import { useUserStore } from '@/stores/userStore'
 
 export default defineComponent({
   data() {
