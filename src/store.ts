@@ -11,6 +11,11 @@ export const key: InjectionKey<Store<State>> = Symbol()
 export const store = createStore<State>({
   state: {
     currentUser: null,
+  },
+  mutations: {
+    setCurrentUser (state, user) {
+      state.currentUser = user
+    }
   }
 })
 

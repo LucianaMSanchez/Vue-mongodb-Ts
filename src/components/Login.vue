@@ -40,7 +40,7 @@ export default defineComponent({
         const createRes = await createUser(user);
         this.currentUser = createRes.data;
       }
-      useUserStore().setCurrentUser(this.currentUser);
+     /* this.$store.setCurrentUser(this.currentUser);*/
       this.$router.push({ name: 'bookmarks' });
     },
     async handleGoogleSignIn() {
