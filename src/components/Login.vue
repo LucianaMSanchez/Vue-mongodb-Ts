@@ -13,6 +13,7 @@ import { getUser, createUser } from "@/services/UserService";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from '../../firebase.config'
 import { useUserStore } from '@/stores/userStore'
+import { useStore } from '../store'
 
 export default defineComponent({
   name: "LoginGoogle",
@@ -21,6 +22,11 @@ export default defineComponent({
       user: {} as User,
       currentUser: {} as User
     }
+  },
+  setup () {
+    const store = useStore()
+
+    store.state.currentUser
   },
   methods: {
     async findOrCreateUser(user: User) {

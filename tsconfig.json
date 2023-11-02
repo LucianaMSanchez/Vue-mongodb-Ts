@@ -33,7 +33,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-, "src/stores/user.jsre.ts"  ],
+, "src/stores/user.jsre.ts", "src/stores/userStore.js", "src/store.js"  ],
   "exclude": [
     "node_modules"
   ]
