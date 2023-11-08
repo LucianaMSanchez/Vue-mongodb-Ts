@@ -3,8 +3,8 @@ import { AxiosResponse } from 'axios';
 import { Bookmark } from "@/interfaces/Bookmark";
 
 
-export const getBookmarks = async () : Promise<AxiosResponse<Bookmark[]>> => 
-    await axios.get("/bookmarks");
+export const getBookmarks = async (profileId : string) : Promise<AxiosResponse<Bookmark[]>> => 
+    await axios.get(`/bookmarks?profileId=${profileId}`);
 
 export const getBookmark = async (id: string) : Promise<AxiosResponse<Bookmark>> => 
     await axios.get("/bookmarks/" + id);
